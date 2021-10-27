@@ -1,7 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Router } from "@reach/router";
 import { FullSpinner } from "./styles/app";
-import "./style.css";
 import Header from "./components/common/Header";
 import HomePage from "./components/home/HomePage";
 
