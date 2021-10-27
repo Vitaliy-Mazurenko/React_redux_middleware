@@ -1,11 +1,10 @@
-import React from "react"
-import "./style.css"
+import "./style.css";
+import CoursesPage from "./components/courses/CoursesPage";
 
-
-const App = props => (
+const App = (props) => (
   <div className="container">
-    <h1>App</h1>
+    <CoursesPage />
   </div>
-)
+);
 
-export default App
+export default App;
