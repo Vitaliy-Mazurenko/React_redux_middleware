@@ -81,6 +81,15 @@ state = {
  - reselect 
 ==================================================================
 
+createSelector( 
+  selector1,
+  selector2,
+  ....
+  selectorN,
+  resolvedfunc(result) => .....
+)
+
+
 ==============📣  4. Подключение store к компоненту CoursePage
 
 
