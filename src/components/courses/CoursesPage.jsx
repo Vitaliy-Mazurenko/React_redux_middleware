@@ -1,14 +1,36 @@
+import { useState } from "react";
+
+const initialCourse = { title: "" };
+
 const CoursesPage = () => {
+  const [course, setCourse] = useState(initialCourse);
+
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+    setCourse((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(course);
+  };
+
   return (
     <div className="container mt-5">
       <h1>Courses Page</h1>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-4">
             <div className="form-group">
               <label htmlFor="title">Title</label>
-              <input name="title" id="title" className="form-control" />
+              <input
+                value={course.title}
+                onChange={handleChange}
+                name="title"
+                id="title"
+                className="form-control"
+              />
             </div>
             <div className="form-group">
               <button className="btn btn-primary">Add Course</button>
