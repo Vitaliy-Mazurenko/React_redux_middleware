@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import App from "./App";
-import configureStore from "./store/configureStore";
+import createStore from "./store/configureStore";
 
-const store = configureStore();
+const store = createStore();
 window.store = store;
 
 ReactDOM.render(
